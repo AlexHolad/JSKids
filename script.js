@@ -1,5 +1,64 @@
 "use strict";
 
+//HANGMAN
+// Создаем массив со словами
+var words = ["кошка","собака","лев","слон","обезьяна","тигр","корова","коза","крыса","бык","лошадь","медведь","белка","ёж","волк","лиса","олень","лось","тюлень","морж","свинья","заяц","рысь"];
+ // Выбираем случайное слово
+ var word = words[Math.floor(Math.random() * words.length)];
+ // Создаем итоговый массив
+ var answerArray = [];
+ for (var i = 0; i < word.length; i++) {
+ answerArray[i] = "_";
+ }
+ var remainingLetters = word.length;
+ var probe = word.length + 2;
+ console.log(probe);
+ // Игровой цикл
+ while (remainingLetters > 0 && probe > 0) {
+ // Показываем состояние игры
+ alert(answerArray.join(" "));
+// Запрашиваем вариант ответа
+var guess = prompt("Угадайте букву, или нажмите Отмена для выхода из игры.");
+guess.toLowerCase();
+probe--;
+alert("Осталось " + probe + " попыток");
+if (guess === null) {
+// Выходим из игрового цикла
+break;
+} else if (guess.length !== 1) {
+alert("Пожалуйста, введите одиночную букву.");
+} else {
+// Обновляем состояние игры
+for (var j = 0; j < word.length; j++) {
+if (word[j] === guess, answerArray[j] === "_") {
+answerArray[j] = guess;
+remainingLetters--;
+console.log("Неразгаданных букв осталось " + remainingLetters);
+} 
+
+}
+}
+// Конец игрового цикла
+}
+// Отображаем ответ и поздравляем игрока
+alert(answerArray.join(" "));
+alert("Было загадано слово " + word);
+
+
+// let likesCat = confirm("Would you like cats?");
+
+// if (likesCat) {
+//     console.log("You are catsfriend");
+// }   else {
+//     console.log("You are good man");
+// };
+
+
+
+
+// var name = prompt("Как вас зовут?");
+// console.log("Привет, " + name);
+// alert("Sparta");
 
 
 
