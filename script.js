@@ -1,5 +1,162 @@
  "use strict";
 
+// Игра: "Найди клад!"
+
+// Получить случайное число от 0 до size-1
+// var getRandomNumber = function (size) {
+//    return Math.floor(Math.random() * size);
+// };
+
+// Получить для расстояния строку подсказки
+// var getDistance = function (event, target) {
+//    var diffX = event.offsetX - target.x;
+//    var diffY = event.offsetY - target.y;
+//    return Math.sqrt((diffX * diffX) + (diffY * diffY));
+// };
+
+// Вычислить расстояние от клика (event) до клада (target)
+// var getDistanceHint = function (distance) {
+//    if (distance < 10) {
+//       return "Обожжёшься";
+//    } else if (distance < 30) {
+//       return "Очень горячо"; 
+//    } else if (distance < 50) {
+//       return "Горячо"; 
+//    } else if (distance < 100) {
+//       return "Тепло"; 
+//    } else if (distance < 200) {
+//       return "Холодно"; 
+//    } else if (distance < 400) {
+//       return "Холодно"; 
+//    } else if (distance < 600) {
+//       return "Очень-очень-очень холодно"; 
+//    } else {
+//       return "Замёрзнешь"; 
+//    }
+// };
+
+// Создаем переменные
+// var width = 800;
+// var height = 800;
+// var clicks = 0;
+
+// Случайная позиция клада
+// var target = {
+//    x: getRandomNumber(width),
+//    y: getRandomNumber(height)
+// };
+
+// Добавляем элементу img обработчик клика
+// $("#map").click(function (event) {
+//     clicks++;
+//    Получаем расстояние от места клика до клада
+//     var distance = getDistance (event, target);
+//    Преобразуем расстояние в подсказку
+//     var distanceHint = getDistanceHint(distance);
+//    Записываем в элемент #distance новую подсказку
+//    $("#distance").text(distanceHint + " " + (16 - clicks));
+//    Если клик был достаточно близко, поздравляем с победой 
+//     if (distance < 8) {
+//        alert("Клад найден! " + "Сделано кликов: " + clicks);
+//     }
+//     if (clicks > 15) {
+//        let theEnd = confirm("КОНЕЦ ИГРЫ");
+//        if (theEnd == true) {
+//          location.reload();
+//        } else {
+//          location.reload();
+//        }
+//     }
+// });
+
+
+ // Игра: поймай цифру)
+// $("h1").click(function() {
+//    clearInterval(intervalId);
+//    var speed = 100; 
+//    setInterval (moveHeadingRight, speed -= 10)
+//    counter++;
+//    $("h1").text(counter);
+//    if (counter == 10) {
+//       clearInterval(intervalId);
+//       $("h1").text("ВЫ ПОБЕДИЛИ!");
+//       alert("ВЫ ПОБЕДИЛИ!");
+//    }
+// });
+
+// var counter = 0;
+// let koorX = 0;
+// let koorY = 0;
+
+// function moveHeadingRight () {
+//    $("#heading").offset({ left: koorX, top: koorY });
+//    if (koorX < 200 && koorY === 0) {
+//       koorX++;  
+//    } else if (koorX === 200 && koorY < 200) {
+//       koorY++;
+//    } else if (koorX > 0 && koorY === 200) { 
+//       koorX--;
+//    } else {
+//       koorY--;
+//    }
+// };
+
+// var intervalId = setInterval (moveHeadingRight, 60);
+
+
+
+
+
+// Заголовок при клике перемещается к курсору
+//  $("html").click (function (event) {
+//    $("#heading").offset({
+//       left: event.pageX,
+//       top: event.pageY
+//    });
+// });
+
+ // Заголовок следует за курсором
+//  $("html").mousemove (function (event) {
+//    $("#heading").offset({
+//       left: event.pageX,
+//       top: event.pageY
+//    });
+// });
+
+
+
+// При клике Передаем в консоль коррдинаты места клика 
+//  var clickHandler = function (event) {
+//    console.log("Клик! " + event.pageX + " " + event.pageY);
+// };
+//    $("h1").click(clickHandler);
+
+
+ // двигаем html элемент влево 
+// var leftOffset = 0;
+
+// function moveHeading () {
+//    $("#heading").offset({ left: leftOffset });
+
+//    leftOffset += 10;
+//    if (leftOffset > 200) {
+//       leftOffset = 0;
+//    }
+// };
+
+// setInterval (moveHeading, 200);
+// alert по таймеру 
+// function doHomeworkAlarm () {
+//    alert("Сделай домашку!");
+// };
+// setTimeout (doHomeworkAlarm, 60000);
+
+// var timeOutID = setTimeout (doHomeworkAlarm, 60000);
+
+// clearTimeout (timeOutID);
+
+
+
 //  var friends = ["Sonia","Serega","Wowchik","Wowa"]
 
 // for (let i = 0; i < friends.length; i++) {
